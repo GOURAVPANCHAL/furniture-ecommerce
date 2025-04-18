@@ -5,18 +5,18 @@ import Image from 'next/image';
 import './toptrending.css';
 
 // Import your category images
-import sofaImg from   '@/app/Components/assets/pic1.jpg';         
-import bedImg from   '@/app/Components/assets/pic2.jpg';         
-import diningImg from   '@/app/Components/assets/pic3.jpg';        
-import sofaBedImg from   '@/app/Components/assets/pic4.jpg';        
-import tvUnitImg from   '@/app/Components/assets/pic1.jpg';        
-import bookshelfImg from   '@/app/Components/assets/pic6.jpg';        
-import coffeeTableImg from   '@/app/Components/assets/pic7.png';        
-import studyTableImg from   '@/app/Components/assets/pic8.png';        
-import decorImg from   '@/app/Components/assets/pic9.png';         
-import furnishingImg from   '@/app/Components/assets/pic10.png';        
-import lampImg from   '@/app/Components/assets/pic11.jpg';         
-import saleImg from   '@/app/Components/assets/pic12.png';         
+import sofaImg from   '@/app/Components/assets/icon1.jpg';         
+import bedImg from   '@/app/Components/assets/icon2.webp';         
+import diningImg from   '@/app/Components/assets/icon3.webp';        
+import sofaBedImg from   '@/app/Components/assets/icon4.jpg';        
+import tvUnitImg from   '@/app/Components/assets/icon6.webp';        
+import bookshelfImg from   '@/app/Components/assets/icon6.webp';        
+import coffeeTableImg from   '@/app/Components/assets/icon7.webp';        
+import studyTableImg from   '@/app/Components/assets/icon8.jpg';        
+import decorImg from   '@/app/Components/assets/icon9.webp';         
+import furnishingImg from   '@/app/Components/assets/icon10.webp';        
+import lampImg from   '@/app/Components/assets/icon11.webp';         
+import saleImg from   '@/app/Components/assets/icon12.webp';         
 
 const CategoryNav = () => {
   const categories = [
@@ -53,7 +53,7 @@ const CategoryNav = () => {
                   <Image 
                     src={category.image} 
                     alt={category.name}
-                    width={150}
+                    width={80}
                     height={150}
                     className="category-image"
                   />
