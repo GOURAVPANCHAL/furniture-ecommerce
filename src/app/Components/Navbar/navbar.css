@@ -1,0 +1,122 @@
+.top-navbar {
+    background-color: #fff;
+    font-size: 14px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .fast-delivery {
+    color: #dc582a;
+  }
+  
+  .middle-navbar {
+    background-color: #fff;
+    flex-wrap: wrap;
+  }
+  
+  .logo img {
+    max-height: 60px;
+  }
+  
+  .btn-brown {
+    background-color: #6e4a1e !important;
+    color: white !important;
+    border: none;
+  }
+  
+  .helpline {
+    color: #5b3917;
+  }
+  
+  .btn-brown:hover {
+    background-color: #5b3917 !important;
+    color: white !important;
+  }
+  
+  .bottom-navbar {
+    border-top: 1px solid #eaeaea;
+  }
+  
+  .nav-link {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .nav-link:hover {
+    color: #dc582a;
+  }
+  
+  /* Mega menu */
+  .mega-nav-item {
+    position: relative;
+  }
+  
+  .mega-nav-item:hover .mega-menu {
+    display: block;
+  }
+  
+  .mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    width: 100vw;
+    padding: 20px 40px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mega-menu .dropdown-link {
+    display: block;
+    padding: 5px 0;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .mega-menu .dropdown-link:hover {
+    color: #dc582a;
+  }
+  
+  /* Mobile-friendly adjustments */
+  @media (max-width: 768px) {
+    .middle-navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .search-bar {
+      width: 100% !important;
+      margin-bottom: 10px;
+    }
+  
+    .auth-section {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .auth-section span,
+    .auth-section button {
+      font-size: 14px;
+    }
+  
+    .mega-menu {
+      position: static;
+      width: 100%;
+      box-shadow: none;
+      padding: 10px;
+    }
+  
+    .mega-menu .row {
+      flex-direction: column;
+    }
+  
+    .mega-menu .col-6,
+    .mega-menu .col-md-2 {
+      width: 100%;
+    }
+  }
+  
