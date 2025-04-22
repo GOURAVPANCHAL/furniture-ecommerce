@@ -1,6 +1,7 @@
 import Link from "next/link"
 import React from "react"
 import './floating.css'
+import { FaWhatsapp } from "react-icons/fa6";
 
 
 export default function FloatingWhatsApp(){
@@ -13,10 +14,10 @@ export default function FloatingWhatsApp(){
               target="_blank"
               rel="norefferrer"
               className="btn btn-success w-100 fw-bold "
-              
-              
               >
-               WhatsApp For Offers
+          
+<FaWhatsapp className="fs-4 me-2" />
+               WhatsApp
               
               </Link> 
 
