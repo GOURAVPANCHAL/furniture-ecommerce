@@ -14,7 +14,7 @@ const Footer = () => {
   // }, []);
 
   return (
-    <footer className="footer" >
+    <footer className="footer">
       <div className="container Footersection">
         <div className="logoSection">
           <Image src="/logo.webp" alt="Manmohan Furnitures Logo" width={100} height={60} />
@@ -65,12 +65,12 @@ const Footer = () => {
           <div className="col-md-3 col-sm-6 mb-4">
             <h3 className="heading">More Information</h3>
             <ul className="list">
-              <li><a href="/about">About Us</a></li>
+              <li><a href="/Pages/about-us">About Us</a></li>
               <li><a href="/privacy-policy">Privacy Policy</a></li>
               <li><a href="/shipping-policy">Shipping Policy</a></li>
-              <li><a href="/terms">Terms & Conditions</a></li>
+              <li><a href="/Pages/term-conditions">Terms & Conditions</a></li>
               <li><a href="/returns">Returns & Exchanges</a></li>
-              <li><a href="/contact">Contact Us</a></li>
+              <li><a href="/Pages/contact-us">Contact Us</a></li>
             </ul>
           </div>
         </div>

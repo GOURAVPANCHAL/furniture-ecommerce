@@ -100,13 +100,13 @@ const Navbar = () => {
           </div>
         </div>
         <div className="logo text-center mx-auto">
-       <Link href="/" >   <Image src="/logo.webp" alt="Manmohan Furnitures" width={100} height={60} />
-       </Link>
+          <Link href="/" >   <Image src="/logo.webp" alt="Manmohan Furnitures" width={100} height={60} />
+          </Link>
         </div>
         <div className="auth-section d-flex align-items-center justify-content-end gap-3">
           <div className="d-flex gap-2">
-          <Link href={'/Pages/Signup'} className="btn btn-brown">SIGN UP</Link>
-          <Link href={'/Pages/Login'} className="btn btn-brown">LOGIN</Link>
+            <Link href={'/Pages/Signup'} className="btn btn-brown">SIGN UP</Link>
+            <Link href={'/Pages/Login'} className="btn btn-brown">LOGIN</Link>
           </div>
           <div className="d-grid align-items-center"><IoIosPersonAdd /></div>
           <span>Profile</span>
@@ -146,7 +146,7 @@ const Navbar = () => {
                                 {item}
                               </span>
                             ) : (
-                              <Link href="#" className="dropdown-item" key={itemIndex}>
+                              <Link href="/Pages/Category" className="dropdown-item" key={itemIndex}>
                                 {item}
                               </Link>
                             )

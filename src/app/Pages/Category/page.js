@@ -9,6 +9,7 @@ import image7 from "@/app/Components/assets/icon8.jpg"
 import Image from 'next/image'
 import Link from 'next/link'
 import './category.css'
+import Product from  '../products/page'
 const page = () => {
     const categories = [
         {
@@ -64,6 +65,7 @@ const page = () => {
                     </div>
                 </div>
             </div>
+            <Product />
         </>
     )
 }
