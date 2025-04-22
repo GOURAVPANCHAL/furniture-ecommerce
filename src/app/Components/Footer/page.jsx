@@ -2,19 +2,19 @@
 import React, { useEffect } from 'react';
 import './footer.css';
 import Image from 'next/image';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 import { FaCcVisa, FaCcMastercard, FaCcAmex, FaWallet, FaLaptop, FaInstagramSquare, FaFacebookSquare, FaTwitterSquare } from 'react-icons/fa';
 
 
 
 const Footer = () => {
-  useEffect(() => {
-    AOS.init({ duration: 600 });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({ duration: 600 });
+  // }, []);
 
   return (
-    <footer className="footer" data-aos="fade-up">
+    <footer className="footer" >
       <div className="container Footersection">
         <div className="logoSection">
           <Image src="/logo.webp" alt="Manmohan Furnitures Logo" width={100} height={60} />
