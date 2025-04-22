@@ -1,3 +1,5 @@
+/* navbar.css */
+
 .top-navbar {
   background-color: #fff;
   font-size: 14px;
@@ -45,6 +47,14 @@
 
 .nav-link:hover {
   color: #dc582a;
+}
+
+/* FIRST COLUMN ITEM STYLE FIXED */
+.first-dropdown-item {
+  font-weight: bold;
+  color:  #523211 !important;
+  pointer-events: none;
+  cursor: default;
 }
 
 /* Mega Dropdown Styles */
@@ -125,19 +135,19 @@
     box-shadow: none;
     padding: 15px;
   }
-  
+
   .mega-dropdown h4 {
     font-size: 16px;
   }
-  
+
   .dropdown-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .mega-dropdown .dropdown-item {
     padding: 6px 0;
   }
-  
+
   .middle-navbar {
     flex-direction: column;
     align-items: center;

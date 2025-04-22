@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from '@/app/Components/Navbar/page';
+import Footer from '@/app/Components/Footer/page'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,13 +26,18 @@ export default function RootLayout({ children }) {
          <title>
           Furniture
          </title>
+         <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+          rel="stylesheet"
+        />
+
       </head>
       <body>
            <Navbar/>
           <div className="childrens fade-in-content">  
         {children}
           </div>
-          {/* <Footer/> */}
+          <Footer/>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossOrigin="anonymous"></script>
       </body>

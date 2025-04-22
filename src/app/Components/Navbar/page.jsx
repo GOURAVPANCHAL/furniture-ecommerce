@@ -1,13 +1,12 @@
+// Navbar.js
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "./navbar.css";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaSearch, FaHeart } from "react-icons/fa";
 import { TbTruckDelivery } from "react-icons/tb";
-import { FaSearch } from "react-icons/fa";
 import { IoIosPersonAdd } from "react-icons/io";
-import { FaHeart } from "react-icons/fa";
 import { MdShoppingCart } from "react-icons/md";
 
 const dropdownContent = {
@@ -18,8 +17,7 @@ const dropdownContent = {
       ["Kids Furniture", "Accent Furniture", "Entertainment", "Bar Furniture", "Commercial"],
       ["Bookcases", "Cabinets", "Shelving", "Room Dividers", "Wall Units"],
       ["Furniture Sets", "Recliners", "Rocking Chairs", "Futons", "Ottomans"],
-      ["Beds", "Dressers", "Nightstands", "Wardrobes", "Armoires"],
-      // ["Sofa Beds", "Daybeds", "Bunk Beds", "Trundle Beds", "Canopy Beds"]
+      ["Beds", "Dressers", "Nightstands", "Wardrobes", "Armoires"]
     ]
   },
   "Sofas & Seating": {
@@ -29,8 +27,7 @@ const dropdownContent = {
       ["Recliners", "Accent Chairs", "Armchairs", "Rocking Chairs", "Swivel Chairs"],
       ["Ottomans", "Benches", "Stools", "Poufs", "Bean Bags"],
       ["Sofa Beds", "Daybeds", "Futons", "Convertibles", "Murphy Chairs"],
-      ["Outdoor Seating", "Patio Chairs", "Garden Benches", "Porch Swings", "Hammocks"],
-      // ["Office Chairs", "Gaming Chairs", "Bar Stools", "Counter Stools", "Dining Chairs"]
+      ["Outdoor Seating", "Patio Chairs", "Garden Benches", "Porch Swings", "Hammocks"]
     ]
   },
   Mattresses: {
@@ -40,8 +37,7 @@ const dropdownContent = {
       ["Gel Memory Foam", "Airbed", "Waterbed", "Adjustable", "Orthopedic"],
       ["King Size", "Queen Size", "Full Size", "Twin Size", "California King"],
       ["Mattress Toppers", "Mattress Pads", "Protectors", "Encasements", "Foundations"],
-      ["Pillows", "Bed Frames", "Box Springs", "Bunkie Boards", "Headboards"],
-      // ["Kids Mattresses", "Guest Mattresses", "Luxury Mattresses", "Eco-Friendly", "Hypoallergenic"]
+      ["Pillows", "Bed Frames", "Box Springs", "Bunkie Boards", "Headboards"]
     ]
   },
   "Home Decor": {
@@ -51,8 +47,7 @@ const dropdownContent = {
       ["Vases", "Figurines", "Sculptures", "Decorative Bowls", "Trays"],
       ["Throw Pillows", "Blankets", "Throws", "Quilts", "Bedspreads"],
       ["Rugs", "Doormats", "Floor Mats", "Carpets", "Runners"],
-      ["Curtains", "Drapes", "Blinds", "Shades", "Valances"],
-      // ["Plants", "Planters", "Terrariums", "Floral Arrangements", "Wreaths"]
+      ["Curtains", "Drapes", "Blinds", "Shades", "Valances"]
     ]
   },
   "Kitchen & Dining": {
@@ -62,22 +57,16 @@ const dropdownContent = {
       ["China Cabinets", "Buffets", "Sideboards", "Servers", "Carts"],
       ["Kitchen Islands", "Baker's Racks", "Pantry Storage", "Pot Racks", "Wine Racks"],
       ["Tableware", "Serveware", "Drinkware", "Flatware", "Barware"],
-      ["Kitchen Storage", "Organizers", "Canisters", "Jars", "Containers"],
-      // ["Kitchen Textiles", "Aprons", "Oven Mitts", "Towels", "Placemats"]
+      ["Kitchen Storage", "Organizers", "Canisters", "Jars", "Containers"]
     ]
   }
 };
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const [dropdownPosition, setDropdownPosition] = useState(0);
 
-  const handleMouseEnter = (navItem, e) => {
+  const handleMouseEnter = (navItem) => {
     setActiveDropdown(navItem);
-    const navbar = e.target.closest('.bottom-navbar');
-    const navbarRect = navbar.getBoundingClientRect();
-    const itemRect = e.target.getBoundingClientRect();
-    setDropdownPosition(itemRect.left - navbarRect.left);
   };
 
   const handleMouseLeave = () => {
@@ -104,27 +93,25 @@ const Navbar = () => {
       <div className="middle-navbar d-flex justify-content-between align-items-center px-3 py-3 flex-wrap">
         <div className="search-bar flex-grow-1 d-none d-md-block" style={{ maxWidth: "30%" }}>
           <div className="input-group">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Search Products, Colors & More .."
-            />
+            <input type="text" className="form-control" placeholder="Search Products, Colors & More .." />
             <span className="input-group-text bg-white">
               <FaSearch className="helpline" />
             </span>
           </div>
         </div>
         <div className="logo text-center mx-auto">
-          <Image src="/logo.webp" alt="Manmohan Furnitures" width={100} height={60} />
+       <Link href="/" >   <Image src="/logo.webp" alt="Manmohan Furnitures" width={100} height={60} />
+       </Link>
         </div>
-        <div className="auth-section d-flex align-items-center justify-content-end gap-3" style={{ maxWidth: "30%" }}>
-          <button className="btn btn-brown">SIGN UP / LOGIN</button>
-          <div className="d-grid align-items-center">
-            <IoIosPersonAdd />
+        <div className="auth-section d-flex align-items-center justify-content-end gap-3">
+          <div className="d-flex gap-2">
+          <Link href={'/Pages/Signup'} className="btn btn-brown">SIGN UP</Link>
+          <Link href={'/Pages/Login'} className="btn btn-brown">LOGIN</Link>
           </div>
-          <span> Profile</span>
+          <div className="d-grid align-items-center"><IoIosPersonAdd /></div>
+          <span>Profile</span>
           <span><FaHeart /> Wishlist (0)</span>
-          <span><MdShoppingCart />Cart (0)</span>
+          <span><MdShoppingCart /> Cart (0)</span>
         </div>
       </div>
 
@@ -136,29 +123,34 @@ const Navbar = () => {
         <div className="collapse navbar-collapse justify-content-center" id="mainNavbar">
           <ul className="navbar-nav mb-2 mb-lg-0">
             {Object.keys(dropdownContent).map((navItem) => (
-              <li 
-                className="nav-item dropdown" 
+              <li
+                className="nav-item dropdown"
                 key={navItem}
-                onMouseEnter={(e) => handleMouseEnter(navItem, e)}
+                onMouseEnter={() => handleMouseEnter(navItem)}
                 onMouseLeave={handleMouseLeave}
               >
                 <Link className="nav-link" href="#">{navItem}</Link>
                 {activeDropdown === navItem && (
-                  <div 
+                  <div
                     className="mega-dropdown"
                     onMouseEnter={() => setActiveDropdown(navItem)}
                     onMouseLeave={handleMouseLeave}
-                    // style={{
-                    //   left: `-${dropdownPosition}px`
-                    // }}
                   >
                     <h4>{dropdownContent[navItem].title}</h4>
                     <div className="dropdown-grid">
                       {dropdownContent[navItem].columns.map((column, colIndex) => (
                         <div className="dropdown-column" key={colIndex}>
-                          {column.map((item, itemIndex) => (
-                            <Link href="#" className="dropdown-item" key={itemIndex}>{item}</Link>
-                          ))}
+                          {column.map((item, itemIndex) =>
+                            itemIndex === 0 ? (
+                              <span className="dropdown-item first-dropdown-item" key={itemIndex}>
+                                {item}
+                              </span>
+                            ) : (
+                              <Link href="#" className="dropdown-item" key={itemIndex}>
+                                {item}
+                              </Link>
+                            )
+                          )}
                         </div>
                       ))}
                     </div>
@@ -166,7 +158,6 @@ const Navbar = () => {
                 )}
               </li>
             ))}
-            {/* Non-dropdown items */}
             <li className="nav-item"><Link className="nav-link" href="#">Furnishings</Link></li>
             <li className="nav-item"><Link className="nav-link" href="#">Lamps & Lighting</Link></li>
             <li className="nav-item"><Link className="nav-link" href="#">Luxury</Link></li>
