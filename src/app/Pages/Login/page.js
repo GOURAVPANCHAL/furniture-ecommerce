@@ -5,7 +5,7 @@ import Image from 'next/image'
 import google from '@/app/Components/assets/google.png'
 import facebook from '@/app/Components/assets/facebook.png'
 import { FaRegCheckCircle } from "react-icons/fa";
-const page = () => {
+const Page = () => {
   const [loginInput, setLoginInput] = useState('')
   const [loginError, setLoginError] = useState('')
   const handleLogin = (e) => {
@@ -59,4 +59,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import './heroSection.css';
+import './herosection.css';
 import pic1 from '@/app/Components/assets/pic1.jpg';
 import pic2 from '@/app/Components/assets/pic2.jpg';
 import pic3 from '@/app/Components/assets/pic3.jpg';
@@ -65,7 +65,7 @@ const HeroSection = () => {
               </div>
               <div className="banner-overlay">
                 <h2>Summer Sale</h2>
-                <h1>UP TO 50% OFF</h1>
+                <h1>UP TO 50 OFF</h1>
                 <p>On selected furniture items</p>
                 <button className="btn btn-light">SHOP DEALS</button>
               </div>

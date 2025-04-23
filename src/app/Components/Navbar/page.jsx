@@ -51,7 +51,8 @@ const dropdownContent = {
       ["Rugs", "Doormats", "Floor Mats", "Carpets", "Runners"],
       ["Curtains", "Drapes", "Blinds", "Shades", "Valances"]
     ]
-  },
+  }, 
+  
   "Kitchen & Dining": {
     title: "Kitchen & Dining Collection",
     columns: [
@@ -153,15 +154,15 @@ const Navbar = () => {
               </Link>
               <Link href={"/Pages/Login"} className="btn btn-brown">
                 LOGIN
-              </Link>
+              </Link> 
             </div>
             <div className="d-grid align-items-center">
               <IoIosPersonAdd />
             </div>
-            <span>Profile</span>
+        <Link href={"/Pages/Profile"} className="text-decoration-none text-dark">    <span>Profile</span></Link>
           
 <span>
-  <Link href="Pages/wishlist" className="text-decoration-none">
+  <Link href="Pages/Wishlist" className="text-decoration-none text-dark">
     <FaHeart /> Wishlist (0)
   </Link>
 </span>
