@@ -110,6 +110,25 @@
     text-align: center;
   }
 
+  .logoSection {
+    display: grid;
+
+    align-items:center;
+    margin-bottom: 30px;
+  }
+  .QuickLinkSec{
+    text-align: center;
+  }
+ .BestSellersSec{
+  text-align:center;
+ }
+
+ .CategoriesSec{
+  text-align: center;
+ }
+  .InformationSec{
+    text-align:center;
+  }
   .paymentsec,
   .SocialLinks {
     justify-content: center;

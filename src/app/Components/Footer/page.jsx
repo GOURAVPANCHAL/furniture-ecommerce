@@ -28,7 +28,8 @@ const Footer = () => {
 
         <div className="row">
           <div className="col-md-3 col-sm-6 mb-4">
-            <h3 className="heading">Quick Links</h3>
+          <div className='QuickLinkSec'>
+          <h3 className="heading">Quick Links</h3>
             <ul className="list">
               <li><a href="/shop">Shop</a></li>
               <li><a href="/faqs">FAQs</a></li>
@@ -37,9 +38,11 @@ const Footer = () => {
               <li><a href="https://instagram.com/yourpage" target="_blank">Follow us on Instagram</a></li>
             </ul>
           </div>
+          </div>
 
           <div className="col-md-3 col-sm-6 mb-4">
-            <h3 className="heading">Our Best Sellers</h3>
+           <div className='BestSellersSec'>
+           <h3 className="heading">Our Best Sellers</h3>
             <ul className="list innerListGrid">
               <li><a href="/products/vintage">Vintage</a></li>
               <li><a href="/products/hotpods">HotPods</a></li>
@@ -47,10 +50,12 @@ const Footer = () => {
               <li><a href="/products/volcano">Volcano</a></li>
               <li><a href="/products/gshock">GShock</a></li>
             </ul>
+           </div>
           </div>
 
           <div className="col-md-3 col-sm-6 mb-4">
-            <h3 className="heading">Our Categories</h3>
+           <div className='CategoriesSec'>
+           <h3 className="heading">Our Categories</h3>
             <ul className="list innerListGrid">
               <li><a href="/category/earbuds">Earbuds & Headphones</a></li>
               <li><a href="/category/mobile-accessories">Mobile & Tablet Accessories</a></li>
@@ -60,10 +65,12 @@ const Footer = () => {
               <li><a href="/category/home-essentials">Home Essentials</a></li>
               <li><a href="/category/everyday">Everyday Essentials</a></li>
             </ul>
+           </div>
           </div>
 
           <div className="col-md-3 col-sm-6 mb-4">
-            <h3 className="heading">More Information</h3>
+         <div className='InformationSec'>
+         <h3 className="heading">More Information</h3>
             <ul className="list">
               <li><a href="/Pages/about-us">About Us</a></li>
               <li><a href="/privacy-policy">Privacy Policy</a></li>
@@ -72,6 +79,7 @@ const Footer = () => {
               <li><a href="/returns">Returns & Exchanges</a></li>
               <li><a href="/Pages/contact-us">Contact Us</a></li>
             </ul>
+         </div>
           </div>
         </div>
 
@@ -95,7 +103,7 @@ const Footer = () => {
                 <a href="https://instagram.com/yourpage" className='instagramicon' target="_blank" aria-label="Instagram"><FaInstagramSquare className="fs-1 " /></a>
                 <a href="https://facebook.com/yourpage" className='facebookicon' target="_blank" aria-label="Facebook"><FaFacebookSquare className="fs-1" /></a>
                 <a href="https://twitter.com/yourpage" className='twittericon' target="_blank" aria-label="Twitter"><FaTwitterSquare className="fs-1" /></a>
-                <a href="https://instagram.com/yourpage" target="_blank" aria-label="Instagram Duplicate"><FaInstagramSquare className="fs-1" /></a>
+                {/* <a href="https://instagram.com/yourpage" target="_blank" aria-label="Instagram Duplicate"><FaInstagramSquare className="fs-1" /></a> */}
               </div>
             </div>
 

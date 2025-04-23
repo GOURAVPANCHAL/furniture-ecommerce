@@ -1,0 +1,15 @@
+.wishlistTable img {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .trashIcon {
+    cursor: pointer;
+    color: #aaa;
+  }
+  
+  .trashIcon:hover {
+    color: red;
+  }
+  
