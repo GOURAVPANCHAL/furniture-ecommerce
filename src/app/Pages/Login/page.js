@@ -5,6 +5,7 @@ import Image from 'next/image'
 import google from '@/app/Components/assets/google.png'
 import facebook from '@/app/Components/assets/facebook.png'
 import { FaRegCheckCircle } from "react-icons/fa";
+import Link from 'next/link'
 const Page = () => {
   const [loginInput, setLoginInput] = useState('')
   const [loginError, setLoginError] = useState('')
@@ -36,6 +37,7 @@ const Page = () => {
                 />
                 {loginError && <p className='text-danger'>{loginError}</p>}
                 <button type='submit' className='login-btn'>Continue</button>
+                <Link href="/Pages/ForgotPassword">forgot password</Link>
                 <div>
                   <p className='login-form-text'>By continuing, you agree to our <a href='#'>Terms of Conditions</a></p>
                   <p className='text-center'>

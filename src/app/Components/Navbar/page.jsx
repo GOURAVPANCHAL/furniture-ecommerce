@@ -11,7 +11,7 @@ import { MdShoppingCart } from "react-icons/md";
 import CartSidebar from "../CartSidebar/CarSidebar";
 
 const dropdownContent = {
-  
+
   Furniture: {
     title: "Furniture Collection",
     columns: [
@@ -51,8 +51,8 @@ const dropdownContent = {
       ["Rugs", "Doormats", "Floor Mats", "Carpets", "Runners"],
       ["Curtains", "Drapes", "Blinds", "Shades", "Valances"]
     ]
-  }, 
-  
+  },
+
   "Kitchen & Dining": {
     title: "Kitchen & Dining Collection",
     columns: [
@@ -74,6 +74,7 @@ const Navbar = () => {
       image: "/icon1.jpg",
       price: 25000,
       quantity: 1,
+
     },
     {
       id: 2,
@@ -83,7 +84,7 @@ const Navbar = () => {
       quantity: 2,
     },
   ]);
-  
+
 
 
 
@@ -154,80 +155,24 @@ const Navbar = () => {
               </Link>
               <Link href={"/Pages/Login"} className="btn btn-brown">
                 LOGIN
-              </Link> 
+              </Link>
             </div>
             <div className="d-grid align-items-center">
               <IoIosPersonAdd />
             </div>
-        <Link href={"/Pages/Profile"} className="text-decoration-none text-dark">    <span>Profile</span></Link>
-          
-<span>
-  <Link href="Pages/Wishlist" className="text-decoration-none text-dark">
-    <FaHeart /> Wishlist (0)
-  </Link>
-</span>
+            <Link href={"/Pages/Profile"} className="text-decoration-none text-dark">    <span>Profile</span></Link>
+
+            <span>
+              <Link href="Pages/Wishlist" className="text-decoration-none text-dark">
+                <FaHeart /> Wishlist (0)
+              </Link>
+            </span>
             {/* 🛒 Updated this line below: */}
             <span style={{ cursor: "pointer" }} onClick={() => setIsCartOpen(true)}>
               <MdShoppingCart /> Cart (2)
             </span>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="logo text-center mx-auto">
-          <Link href="/" >   <Image src="/logo.webp" alt="Manmohan Furnitures" width={100} height={60} />
-          </Link>
-        </div>
-        <div className="auth-section d-flex align-items-center justify-content-end gap-3">
-          <div className="d-flex gap-2">
-            <Link href={'/Pages/Signup'} className="btn btn-brown">SIGN UP</Link>
-            <Link href={'/Pages/Login'} className="btn btn-brown">LOGIN</Link>
-          </div>
-          <div className="d-grid align-items-center"><IoIosPersonAdd /></div>
-          <span>Profile</span>
-          <span><FaHeart /> Wishlist (0)</span>
-          <span><MdShoppingCart /> Cart (0)</span>
-        </div>
-      </div>
-
-      {/* Bottom Navbar */}
-      <nav className="bottom-navbar navbar navbar-expand-lg navbar-light bg-light px-3">
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse justify-content-center" id="mainNavbar">
-          <ul className="navbar-nav mb-2 mb-lg-0">
-            {Object.keys(dropdownContent).map((navItem) => (
-              <li
-                className="nav-item dropdown"
-                key={navItem}
-                onMouseEnter={() => handleMouseEnter(navItem)}
-                onMouseLeave={handleMouseLeave}
-              >
-                <Link className="nav-link" href="#">{navItem}</Link>
-                {activeDropdown === navItem && (
-                  <div
-                    className="mega-dropdown"
-                    onMouseEnter={() => setActiveDropdown(navItem)}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    <h4>{dropdownContent[navItem].title}</h4>
-                    <div className="dropdown-grid">
-                      {dropdownContent[navItem].columns.map((column, colIndex) => (
-                        <div className="dropdown-column" key={colIndex}>
-                          {column.map((item, itemIndex) =>
-                            itemIndex === 0 ? (
-                              <span className="dropdown-item first-dropdown-item" key={itemIndex}>
-                                {item}
-                              </span>
-                            ) : (
-                              <Link href="/Pages/Category" className="dropdown-item" key={itemIndex}>
-                                {item}
-                              </Link>
-                            )
-                          )}
-                        </div>
-                      ))}
-=======
 
         {/* Bottom Navbar */}
         <nav className="bottom-navbar navbar navbar-expand-lg navbar-light bg-light px-3">
@@ -275,14 +220,13 @@ const Navbar = () => {
                           </div>
                         ))}
                       </div>
->>>>>>> d8032ae4bfde3d8b329fb5f35781bfcc9934f3f5
                     </div>
                   )}
                 </li>
               ))}
               <li className="nav-item">
-                <Link className="nav-link" href="#">
-                  Furnishings
+                <Link className="nav-link" href="Pages/products">
+                  Furnishing
                 </Link>
               </li>
               <li className="nav-item">
@@ -306,14 +250,14 @@ const Navbar = () => {
 
         {/* 🧾 Cart Sidebar component at the bottom */}
         <CartSidebar
-  isOpen={isCartOpen}
-  onClose={closeCart}
-  cartItems={cartItems}
-  onRemoveItem={(id) => {
-    const updated = cartItems.filter(item => item.id !== id);
-    setCartItems(updated);
-  }}
-/>
+          isOpen={isCartOpen}
+          onClose={closeCart}
+          cartItems={cartItems}
+          onRemoveItem={(id) => {
+            const updated = cartItems.filter(item => item.id !== id);
+            setCartItems(updated);
+          }}
+        />
 
       </header>
     </>

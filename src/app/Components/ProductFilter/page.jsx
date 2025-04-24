@@ -16,9 +16,9 @@ const page = () => {
                                         Price
                                     </button>
                                     <ul className="dropdown-menu">
-                                        <li><a className="dropdown-item" href="#">Under $50</a></li>
-                                        <li><a className="dropdown-item" href="#">$50 - $100</a></li>
-                                        <li><a className="dropdown-item" href="#">Above $100</a></li>
+                                        <li><a className="dropdown-item" href="#">Under $5000</a></li>
+                                        <li><a className="dropdown-item" href="#">$5000 - $10000</a></li>
+                                        <li><a className="dropdown-item" href="#">Above $10000</a></li>
                                     </ul>
                                 </div>
                                 {/* Category Dropdown */}
@@ -27,9 +27,9 @@ const page = () => {
                                         Category
                                     </button>
                                     <ul className="dropdown-menu">
-                                        <li><a className="dropdown-item" href="#">Clothing</a></li>
-                                        <li><a className="dropdown-item" href="#">Accessories</a></li>
-                                        <li><a className="dropdown-item" href="#">Shoes</a></li>
+                                        <li><a className="dropdown-item" href="#">Sofas</a></li>
+                                        <li><a className="dropdown-item" href="#">Furniture</a></li>
+                                        <li><a className="dropdown-item" href="#">Tables </a></li>
                                     </ul>
                                 </div>
                                 {/* Material Dropdown */}
