@@ -7,7 +7,7 @@
 }
 
 .fast-delivery {
-  color: #dc582a;
+  color: var(--brown);
 }
 
 .middle-navbar {
@@ -20,17 +20,17 @@
 }
 
 .btn-brown {
-  background-color: #6e4a1e !important;
+  background-color: var(--brown) !important;
   color: white !important;
   border: none;
 }
 
 .helpline {
-  color: #5b3917;
+  color: var(--brown);
 }
 
 .btn-brown:hover {
-  background-color: #5b3917 !important;
+  background-color: var(--brown) !important;
   color: white !important;
 }
 
@@ -46,13 +46,13 @@
 }
 
 .nav-link:hover {
-  color: #dc582a;
+  color: var(--brown);
 }
 
 /* FIRST COLUMN ITEM STYLE FIXED */
 .first-dropdown-item {
   font-weight: bold;
-  color:  #523211 !important;
+  color:  var(--brown) !important;
   pointer-events: none;
   cursor: default;
 }
@@ -89,7 +89,7 @@
 }
 
 .mega-dropdown h4 {
-  color: #6e4a1e;
+  color: var(--brown);
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: 600;
@@ -119,7 +119,7 @@
 }
 
 .mega-dropdown .dropdown-item:hover {
-  color: #dc582a;
+  color: var(--brown);
   padding-left: 5px;
 }
 
