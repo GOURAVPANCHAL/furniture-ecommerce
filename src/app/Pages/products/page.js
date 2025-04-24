@@ -109,7 +109,7 @@ const page = () => {
                             return (
                                 <div className='col-md-3' key={index}>
                                     <div className='product-card'>
-                                        <Link href={`/products/${item._id}`} className='product-link'>
+                                        <Link href={`/Pages/products/id`} className='product-link'>
                                             <img className='product-image' src={item.images[0]} alt='product-image' width={300} height={300} />
                                             <div className='product-details'>
                                                 <h3>{item.productName}</h3>
@@ -118,7 +118,6 @@ const page = () => {
                                                     <p className='price'><del>₹{item.Variant[0].price}</del></p>
                                                     <p className='discount'>{item.Variant[0].discountPrice}% OFF</p>
                                                 </div>
-
                                             </div>
                                         </Link>
                                     </div>
