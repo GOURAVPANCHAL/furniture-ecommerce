@@ -164,7 +164,7 @@ const CartPage = ({ params }) => {
                 <div className="col-md-4">
                     <div className="cart-price-data">
                         <div className="subtotal">
-                            <h4>Subtotal: </h4>
+                            <h4>Sub Total: </h4>
                             <h4>
                                 <i className="bi bi-currency-rupee"></i>
                                 {calculateTotal()}
