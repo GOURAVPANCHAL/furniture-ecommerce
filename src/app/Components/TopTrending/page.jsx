@@ -53,8 +53,6 @@ const CategoryNav = () => {
                   <Image 
                     src={category.image} 
                     alt={category.name}
-                    width={80}
-                    height={150}
                     className="category-image"
                   />
                 </div>

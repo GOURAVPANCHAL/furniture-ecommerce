@@ -32,6 +32,7 @@ const Product = () => {
                     <h2>Check Out More ( Categiorys name )</h2>
                 </div>
             <Swiper
+            style={{padding:"0px 0px 20px 0px"}}
                 slidesPerView={4}
                 spaceBetween={30}
                 pagination={{

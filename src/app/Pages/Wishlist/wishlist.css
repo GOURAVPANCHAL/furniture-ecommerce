@@ -13,3 +13,36 @@
     color: red;
   }
 
+
+  .wishlist-heading{
+    text-align: center;
+    padding: 0px 0 40px;
+    font-size: 60px;
+  }
+
+  .wishtlist-main{
+    margin-bottom: 2rem;
+  }
+
+  .wishlist-heading h1{
+    font-size: 60px;
+    margin: 0;
+  }
+
+  .wishlist-table{
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+
+  @media only screen and (max-width:768px) {
+    .wishlist-heading h1{
+      font-size: 30px;
+    }
+
+    .wishlist-heading{
+      font-size: 30px;
+      padding: 0px 0 20px;
+    }
+    
+  }

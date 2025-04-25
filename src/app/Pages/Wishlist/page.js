@@ -3,6 +3,8 @@ import React from 'react';
 import styles from './wishlist.css';
 import { FaTrashAlt, FaFacebookF, FaTwitter, FaPinterestP, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import Image from 'next/image';
+import Link from 'next/link';
+import { IoIosHeartEmpty } from "react-icons/io";
 
 const wishlistItems = [
   {
@@ -44,9 +46,30 @@ const wishlistItems = [
   },
 ];
 
-const Wishlist = () => {
+const page = () => {
   return (
-    <div className="container my-5">
+    <>
+     <nav aria-label="breadcrumb" className="pretty-breadcrumb">
+                <div className="container">
+                    <ol className="breadcrumb align-items-center">
+                        <li className="breadcrumb-item">
+                            <Link href="/">
+                                <span className="breadcrumb-link">Home</span>
+                            </Link>
+                        </li>
+                        <li className="breadcrumb-item active" aria-current="page">
+                            Wishlist
+                        </li>
+                    </ol>
+                </div>
+            </nav>
+            <div className='wishtlist-main'>
+    <div className="container">
+      <div className='wishlist-heading'>
+        <IoIosHeartEmpty />
+        <h1>My Wishlist</h1>
+      </div>
+      <div className='wishlist-table'>
       <table className={`table table-bordered ${styles.wishlistTable}`}>
         <thead>
           <tr>
@@ -62,7 +85,6 @@ const Wishlist = () => {
           {wishlistItems.map(item => (
             <tr key={item.id}>
               <td className="text-center">
-                <input type="checkbox" className="form-check-input me-2" />
                 <FaTrashAlt className={styles.trashIcon} />
               </td>
               <td className="d-flex align-items-center gap-3">
@@ -95,6 +117,8 @@ const Wishlist = () => {
         </tbody>
       </table>
 
+      </div>
+
       <div className="d-flex align-items-center gap-2 my-4">
         <select className="form-select w-auto">
           <option>Add to cart</option>
@@ -117,184 +141,9 @@ const Wishlist = () => {
         </div>
       </div>
     </div>
+            </div>
+    </>
   );
 };
 
-export default Wishlist;
-
-
-
-
-
-
-
-// import React from 'react'
-// import { FaTrashAlt, FaFacebookF, FaTwitter, FaPinterestP, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
-// import styles from './wishlist.css';
-// import Image from 'next/image';
-
-
-// const wishlistItems = [
-// {
-//   id : 1 ,
-//   name : "Sofa Set",
-//   image : "/icon1.jpg",
-//   price : "12000",
-//   discountPrice : "3000",
-//   stock : "In Stock",
-//   date : "sep 4 2024",
-//   isVariable : false
-// },
-// {
-//   id : 2 ,
-//   name : "  sofa cum Bed ",
-//   image : "/icon2.webp",
-//   price : "19000",
-//   discountPrice : "15000",
-//   stock : "In Stock",
-//   date : "Mar 3 2024",
-//   isVariable : false
-// },
-// {
-//   id : 3 ,
-//   name : "Book Selves",
-//   image : "/icon3.webp",
-//   price : "5000",
-//   discountPrice : "3000",
-//   stock : "In Stock",
-//   date : "dec 12 2024",
-//   isVariable : false
-// },
-// {
-//   id : 4 ,
-//   name : "Coffee Table",
-//   image : "/icon4.jpg",
-//   price : "12000",
-//   discountPrice : "3000",
-//   stock : "In Stock",
-//   date : "sep 4 2024",
-//   isVariable : false
-// },
-
-// ]
-
-
-
-//  export default function Wishlist (){
-
-//     return(
-//       <>
-//       <section>
-//        <div className='container '>
-//         <table className={`table table-bordered ${styles.wishlistTable}`}>
-//           <thead>
-//             <tr>
-//               <th>id</th>
-//               <th>Product Name</th>
-//               <th>Unit Price</th>
-//               <th>Quantity</th>
-//               <th>Stock Status</th>
-//               <th>Arrange</th>
-//             </tr>
-//           </thead>
-//            <tbody>
-//             {
-//                wishlistItems.map((item)=>{
-//                 return <tr key={item.id}>
-//                        <td className="text-center">
-//                         <input type="checkbox" className='form-check-input me-2' />
-//                        <FaTrashAlt className={styles.TrashIcon}/>
-//                        </td>
-//                        <td className='d-flex align-items-center gap-3'>
-//                         <Image src={item.image} width={60} height={60} alt={item.name} className={styles.productImg}/>
-//                         {item.name}
-//                        </td>
-//                        <td>
-//                         {
-//                        item.discountPrice ? (
-//                         <>
-//                         <del className='text-muted me-2'>{item.price}</del>
-//                         <span className='text-info fw-semibold'>{item.discountPrice}</span>
-//                         </>
-//                        ):(
-//                           <span>{item.price}</span>
-//                        ) }
-//                         </td>
-//                          <td>
-//                           <input type="number" defaultValue={1} className='form-control w-50'/>
-//                          </td>
-//                          <td>
-//                           <span>{item.stock}</span> <br/>
-//                           <small>Added on : {item.date}</small><br/>
-//                           <button className="btn btn-sm btn-info mt-2">
-//                             {item.isVariable ? "Select options" : "Add to cart"}
-//                           </button>
-//                          </td>
-//                          <td className='text-center'>⇅</td>
-//                 </tr>
-//                })
-//             }
-//            </tbody>
-//         </table>
-//         <div className='d-flex align-items-center gap-2 my-4'>
-//           <select className="form-select w-auto">
-//             <option>Add to cart</option>
-//             <option>Remove</option>
-//           </select>
-//           <button className='btn btn-outline-info'>Apply</button>
-
-//         </div>
-//         <div className='d-flex justify-content-between align-items-center flex-wrap gap-3'>
-//                <div className='d-flex gap-3 align-items-center'>
-//                 <strong>Share on :</strong>
-//                 <FaFacebookF/>
-//                 <FaTwitter/>
-//                 <FaPinterestP/>
-//                 <FaEnvelope/>
-//                 <FaWhatsapp/>
-
-//                </div>
-
-//                <div className='d-flex gap-2'>
-//                 <button className='btn btn-light border'>📩 ASK FOR AN ESTIMATE</button>
-//                <button className='btn btn-info'>ADD ALL TO CART</button>
-//                </div>
-//         </div>
-
-
-
-//        </div>
-
-
-//       </section>
-      
-      
-//       </>
-//     )
-
-
-//  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default page;

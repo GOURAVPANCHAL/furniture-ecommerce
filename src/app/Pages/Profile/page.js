@@ -5,7 +5,7 @@ import Image from 'next/image'
 import './profile.css'
 import pic1 from '@/app/Components/assets/icon1.jpg'
 import pic2 from '@/app/Components/assets/icon2.webp'
-
+import { FaUser, FaShoppingBag, FaMapMarkerAlt, FaCog } from 'react-icons/fa';
 export default function Profile() {
   const [activeTab, setActiveTab] = useState('profile')
   const [avatar, setAvatar] = useState('/User.jpg') // default avatar
@@ -74,22 +74,22 @@ export default function Profile() {
               <ul className="nav flex-column mt-4">
                 <li className="nav-item" onClick={() => setActiveTab('profile')}>
                   <a className={`nav-link ${activeTab === 'profile' ? 'active' : ''}`}>
-                    🧍 Profile Info
+                  <FaUser /> Profile Info
                   </a>
                 </li>
                 <li className="nav-item" onClick={() => setActiveTab('orders')}>
                   <a className={`nav-link ${activeTab === 'orders' ? 'active' : ''}`}>
-                    📦 Orders
+                  <FaShoppingBag /> Orders
                   </a>
                 </li>
                 <li className="nav-item" onClick={() => setActiveTab('address')}>
                   <a className={`nav-link ${activeTab === 'address' ? 'active' : ''}`}>
-                    📍 Address
+                  <FaMapMarkerAlt /> Address
                   </a>
                 </li>
                 <li className="nav-item" onClick={() => setActiveTab('settings')}>
                   <a className={`nav-link ${activeTab === 'settings' ? 'active' : ''}`}>
-                    ⚙️ Settings
+                  <FaCog /> Settings
                   </a>
                 </li>
               </ul>

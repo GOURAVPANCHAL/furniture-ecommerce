@@ -105,7 +105,7 @@ const Navbar = () => {
     <>
       <header className="main-navbar">
         {/* Top Navbar */}
-        <div className="container">
+        <div className="container-fluid">
           <div className="top-navbar d-flex justify-content-between align-items-center px-3 py-2 flex-wrap">
             <div className="left d-flex align-items-center gap-3 flex-wrap">
               <span className="fast-delivery">
@@ -114,15 +114,16 @@ const Navbar = () => {
             </div>
             <div className="right d-flex align-items-center gap-3 flex-wrap">
               <span>
+
                 <FaPhoneAlt className="fs-5 helpline" /> +91-9314444747
               </span>
-              <Link className="nav-link" href="#">
+              <Link className="nav-link" href="/Pages/franchise">
                 Become a Franchise
               </Link>
               <Link className="nav-link" href="#">
                 Track Order
               </Link>
-              <Link className="nav-link" href="#">
+              <Link className="nav-link" href="/Pages/helpCenter">
                 Help Center
               </Link>
             </div>
@@ -163,7 +164,7 @@ const Navbar = () => {
             <Link href={"/Pages/Profile"} className="text-decoration-none text-dark">    <span>Profile</span></Link>
 
             <span>
-              <Link href="Pages/Wishlist" className="text-decoration-none text-dark">
+              <Link href="/Pages/Wishlist" className="text-decoration-none text-dark">
                 <FaHeart /> Wishlist (0)
               </Link>
             </span>
