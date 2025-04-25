@@ -116,10 +116,10 @@ const Navbar = () => {
               <span>
                 <FaPhoneAlt className="fs-5 helpline" /> +91-9314444747
               </span>
-              <Link className="nav-link" href="#">
+              <Link className="nav-link" href="/Pages/addtocart">
                 Become a Franchise
               </Link>
-              <Link className="nav-link" href="#">
+              <Link className="nav-link" href="/Pages/TrackOrder">
                 Track Order
               </Link>
               <Link className="nav-link" href="#">

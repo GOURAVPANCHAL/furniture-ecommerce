@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <Navbar />
+        <Navbar/>
         <div className="childrens fade-in-content">
           {children}
         </div>
