@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import './forgot.css';
-import logo from '@/app/Components/assets/logo.webp';
+// import logo from '@/app/Components/assets/logo.webp';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -61,7 +61,7 @@ const Page = () => {
         <div className="forgot-wrapper">
             <div className="left-panel d-none d-md-flex flex-column justify-content-center text-white p-5">
                 <div className="text-center">
-                    <Image src={logo} alt="Logo" width={150} className="mb-4" />
+                    {/* <Image src={logo} alt="Logo" width={150} className="mb-4" /> */}
                     <h1 className="display-5 fw-bold text-dark">MANMOHAN FURNITURES</h1>
                     <p className="lead mt-3 text-dark">Manage your business, export smartly.</p>
                     <p className="text-light opacity-75 text-dark">Secure, elegant password recovery experience.</p>
