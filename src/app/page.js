@@ -7,6 +7,7 @@ import FloatingWhatsApp from "./Components/FloatingWhatsApp/page";
 import AnimatedMedia from "./Components/AnimatedGif/page";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import FAQ from "./Components/Faq/FAQ";
 export default function Home() {
   return (
     <>
@@ -17,6 +18,7 @@ export default function Home() {
       <AnimatedMedia src="/AnimatedGif.webp" alt="Loading animation" />
       <Collection/>
       <Carousel/>
+      <FAQ />
     </>
    
   );

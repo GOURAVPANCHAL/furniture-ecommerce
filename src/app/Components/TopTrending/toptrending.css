@@ -58,8 +58,8 @@
   /* Responsive Adjustments */
   @media (max-width: 992px) {
     .category-image-container {
-      width: 80px;
-      height: 80px;
+      width: 140px;
+      height: 140px;
     }
     
     .category-name {
@@ -69,8 +69,8 @@
   
   @media (max-width: 768px) {
     .category-image-container {
-      width: 70px;
-      height: 70px;
+      width: 140px;
+      height: 140px;
     }
     
     .category-name {
@@ -80,8 +80,8 @@
   
   @media (max-width: 576px) {
     .category-image-container {
-      width: 60px;
-      height: 60px;
+      width: 100px;
+      height: 100px;
       margin-bottom: 8px;
     }
     

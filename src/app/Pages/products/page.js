@@ -3,24 +3,36 @@ import React, { useEffect, useState } from 'react'
 import './products.css'
 import axios from 'axios';
 import Link from 'next/link';
-import Image from 'next/image';
+import { FaHeart } from "react-icons/fa";
+import { FaRegHeart } from 'react-icons/fa6';
+
 const page = () => {
+    // State to track the wishlisted product ID
+    const [wishlistedProductId, setWishlistedProductId] = useState(null);
+
+    // Function to toggle wishlist for a specific product
+    const toggleWishlist = (e, productId) => {
+        e.preventDefault(); // Prevent navigation when clicking the heart
+        setWishlistedProductId((prevId) => (prevId === productId ? null : productId)); // Toggle wishlist state
+    };
+
+    // Fetch products from API
     const [products, setProducts] = useState([]);
     useEffect(() => {
         const URL = 'https://api.sddipl.com/api/product/get-all-products-with-pagination';
         axios.get(URL)
             .then((response) => {
                 console.log("Products:", response.data?.data);
-
                 setProducts(response.data?.data || []);
             })
             .catch((err) => {
                 console.error("Error fetching products:", err);
             })
     }, [])
+
     return (
         <>
-            {/* product filteration  */}
+            {/* Product filter section */}
             <section className='product-filter py-2'>
                 <div className='container'>
                     <div className='row align-items-center'>
@@ -97,7 +109,8 @@ const page = () => {
                     </div>
                 </div>
             </section>
-            {/* product list */}
+
+            {/* Product list */}
             <section className='product-list'>
                 <div className='product-list-header'>
                     <h2>Products</h2>
@@ -107,18 +120,35 @@ const page = () => {
                     <div className='row'>
                         {products?.map((item, index) => {
                             return (
-                                <div className='col-md-3' key={index}>
-                                    <div className='product-card'>
+                                <div className='col-md-3 col-6' key={index}>
+                                    <div className='product-card' style={{ position: 'relative' }}>
                                         <Link href={`/Pages/products/id`} className='product-link'>
-                                            <img className='product-image' src={item.images[0]} alt='product-image' width={300} height={300} />
+                                            <img
+                                                className='product-image'
+                                                src={item.images[0]}
+                                                alt='product-image'
+                                            />
                                             <div className='product-details'>
                                                 <h3>{item.productName}</h3>
                                                 <div className='product-price-section'>
-                                                    <p className='final-price'> ₹{item.Variant[0].finalPrice}</p>
+                                                    <p className='final-price'>₹{item.Variant[0].finalPrice}</p>
                                                     <p className='price'><del>₹{item.Variant[0].price}</del></p>
                                                     <p className='discount'>{item.Variant[0].discountPrice}% OFF</p>
                                                 </div>
                                             </div>
+
+                                            {/* Wishlist Button */}
+                                            <button
+                                                className='wishlist-btn'
+                                                onClick={(e) => toggleWishlist(e, item.id)}
+                                                aria-label='Add to Wishlist'
+                                            >
+                                                {wishlistedProductId === item.id ? (
+                                                    <FaHeart className='wishlist-icon red' />
+                                                ) : (
+                                                    <FaRegHeart className='wishlist-icon' />
+                                                )}
+                                            </button>
                                         </Link>
                                     </div>
                                 </div>
@@ -127,8 +157,11 @@ const page = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Wishlist styles */}
+           
         </>
     )
 }
 
-export default page
+export default page;

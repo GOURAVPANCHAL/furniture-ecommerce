@@ -56,8 +56,10 @@ const Page = () => {
                                 <span className="breadcrumb-link">Home</span>
                             </Link>
                         </li>
-                        <li className="breadcrumb-item active" aria-current="page">
-                            Products
+                        <li className="breadcrumb-item">
+                            <Link href="/Pages/products">
+                                <span className="breadcrumb-link">Products</span>
+                            </Link>
                         </li>
                         <li className="breadcrumb-item active" aria-current="page">
                             Product Details

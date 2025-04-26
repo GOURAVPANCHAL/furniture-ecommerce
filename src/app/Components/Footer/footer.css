@@ -104,11 +104,18 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .footer {
+    padding: 20px 0px;
+  }
   .bottomFlexWrapper {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+
+  .logoText {
+   margin: 0;
+  }  
 
   .logoSection {
     display: grid;
@@ -116,19 +123,10 @@
     align-items:center;
     margin-bottom: 30px;
   }
-  .QuickLinkSec{
-    text-align: center;
+  .QuickLinkSec , .BestSellersSec , .CategoriesSec , .InformationSec{
+    text-align: start;
   }
- .BestSellersSec{
-  text-align:center;
- }
 
- .CategoriesSec{
-  text-align: center;
- }
-  .InformationSec{
-    text-align:center;
-  }
   .paymentsec,
   .SocialLinks {
     justify-content: center;

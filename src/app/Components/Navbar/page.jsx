@@ -9,6 +9,12 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { IoIosPersonAdd } from "react-icons/io";
 import { MdShoppingCart } from "react-icons/md";
 import CartSidebar from "../CartSidebar/CarSidebar";
+import { GoHomeFill } from "react-icons/go";
+import { BsFilePlayFill } from "react-icons/bs";
+import { BiSolidCategory } from "react-icons/bi";
+import { RiAccountBoxFill } from "react-icons/ri";
+import { FaShoppingCart } from "react-icons/fa";
+import { CgProfile } from "react-icons/cg";
 
 const dropdownContent = {
 
@@ -105,7 +111,7 @@ const Navbar = () => {
     <>
       <header className="main-navbar">
         {/* Top Navbar */}
-        <div className="container">
+        <div className="container-fluid">
           <div className="top-navbar d-flex justify-content-between align-items-center px-3 py-2 flex-wrap">
             <div className="left d-flex align-items-center gap-3 flex-wrap">
               <span className="fast-delivery">
@@ -114,15 +120,16 @@ const Navbar = () => {
             </div>
             <div className="right d-flex align-items-center gap-3 flex-wrap">
               <span>
+
                 <FaPhoneAlt className="fs-5 helpline" /> +91-9314444747
               </span>
-              <Link className="nav-link" href="/Pages/addtocart">
+              <Link className="nav-link" href="/Pages/franchise">
                 Become a Franchise
               </Link>
-              <Link className="nav-link" href="/Pages/TrackOrder">
+              <Link className="nav-link" href="#">
                 Track Order
               </Link>
-              <Link className="nav-link" href="#">
+              <Link className="nav-link" href="/Pages/helpCenter">
                 Help Center
               </Link>
             </div>
@@ -163,7 +170,7 @@ const Navbar = () => {
             <Link href={"/Pages/Profile"} className="text-decoration-none text-dark">    <span>Profile</span></Link>
 
             <span>
-              <Link href="Pages/Wishlist" className="text-decoration-none text-dark">
+              <Link href="/Pages/Wishlist" className="text-decoration-none text-dark">
                 <FaHeart /> Wishlist (0)
               </Link>
             </span>
@@ -260,6 +267,30 @@ const Navbar = () => {
         />
 
       </header>
+      <div className="responsive-topbar">
+        <div className="responsve-topbar-main">
+          <div>
+            <Link href="/">
+              <Image src="/logo.webp" alt="Manmohan Furnitures" width={100} height={60} />
+            </Link>
+          </div>
+          <div>
+            <p className="m-0"><Link href={"/Pages/Profile"}> <CgProfile className="responsive-topbar-icons" /></Link></p>
+          </div>
+        </div>
+        <div className="topbar-search">
+          <input type="search" placeholder="Search..." />
+        </div>
+      </div>
+      <div className="responsive-navbar bottom-bar">
+        <div className="responsive-main">
+          <p><Link href={"/"}> <GoHomeFill className="responsive-icons" /> Home</Link></p>
+          <p><Link href={"/Component/ReelSection"}> <BsFilePlayFill className="responsive-icons" /> Video</Link></p>
+          <p><Link href={"/Pages/Category"}> <BiSolidCategory className="responsive-icons" /> Category</Link></p>
+          <p><Link href={"/"}> <RiAccountBoxFill className="responsive-icons" /> Account</Link></p>
+          <p><Link href={"/"}> <FaShoppingCart className="responsive-icons" /> Cart</Link></p>
+        </div>
+      </div>
     </>
   );
 };

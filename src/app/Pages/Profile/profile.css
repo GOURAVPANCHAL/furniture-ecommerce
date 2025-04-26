@@ -7,10 +7,10 @@
 .sidebar {
   background: rgba(91, 45, 7, 0.95);
   color: white;
-  min-height: 80vh;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  min-height: 100%;
   box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .sidebar .nav-link {
@@ -31,9 +31,9 @@
 
 .content-area {
   background: rgba(255, 255, 255, 0.95);
-  border-radius: 1rem;
+  border-radius: 0rem;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  height: 100vh;
+  height: 100dvh;
   overflow-y: auto;
 }
 
@@ -46,6 +46,10 @@
 .profile-avatar-container {
   position: relative;
   display: inline-block;
+}
+
+.profile-avatar-container img {
+  object-fit: cover;
 }
 
 .change-icon {
