@@ -9,6 +9,12 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { IoIosPersonAdd } from "react-icons/io";
 import { MdShoppingCart } from "react-icons/md";
 import CartSidebar from "../CartSidebar/CarSidebar";
+import { GoHomeFill } from "react-icons/go";
+import { BsFilePlayFill } from "react-icons/bs";
+import { BiSolidCategory } from "react-icons/bi";
+import { RiAccountBoxFill } from "react-icons/ri";
+import { FaShoppingCart } from "react-icons/fa";
+import { CgProfile } from "react-icons/cg";
 
 const dropdownContent = {
 
@@ -261,6 +267,30 @@ const Navbar = () => {
         />
 
       </header>
+      <div className="responsive-topbar">
+        <div className="responsve-topbar-main">
+          <div>
+            <Link href="/">
+              <Image src="/logo.webp" alt="Manmohan Furnitures" width={100} height={60} />
+            </Link>
+          </div>
+          <div>
+            <p className="m-0"><Link href={"/Pages/Profile"}> <CgProfile className="responsive-topbar-icons" /></Link></p>
+          </div>
+        </div>
+        <div className="topbar-search">
+          <input type="search" placeholder="Search..." />
+        </div>
+      </div>
+      <div className="responsive-navbar bottom-bar">
+        <div className="responsive-main">
+          <p><Link href={"/"}> <GoHomeFill className="responsive-icons" /> Home</Link></p>
+          <p><Link href={"/Component/ReelSection"}> <BsFilePlayFill className="responsive-icons" /> Video</Link></p>
+          <p><Link href={"/Pages/Category"}> <BiSolidCategory className="responsive-icons" /> Category</Link></p>
+          <p><Link href={"/"}> <RiAccountBoxFill className="responsive-icons" /> Account</Link></p>
+          <p><Link href={"/"}> <FaShoppingCart className="responsive-icons" /> Cart</Link></p>
+        </div>
+      </div>
     </>
   );
 };
