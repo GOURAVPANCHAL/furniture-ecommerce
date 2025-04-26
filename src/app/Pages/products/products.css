@@ -15,7 +15,7 @@
   font-weight: 500;
 }
 
-.product-list-header{
+.product-list-header {
   text-align: center;
   margin: 2rem;
 }
@@ -38,4 +38,13 @@
 
 .wishlist-icon.red {
   color: red;
+}
+
+
+@media only screen and (max-width:768px) {
+
+  .product-list-header {
+    margin: 1rem;
+  }
+
 }

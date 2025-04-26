@@ -101,8 +101,10 @@ export default function Profile() {
           </div>
 
           {/* Main Content */}
-          <div className="col-md-9 content-area p-4">
+          <div className="col-md-9  p-4">
+            <div className='content-area  '>
             {renderContent()}
+            </div>
           </div>
         </div>
       </div>
@@ -119,10 +121,6 @@ const ProfileInfo = () => (
        <li className="list-group-item "><strong>Email : </strong> <span className="text-success"> mukeshmahar00@gmail.com</span></li>
        <li className="list-group-item"> <strong>Phone : </strong> <span className="text-warning"> 7827433944</span></li>
      </ul>
-   
-   
-   
-
   </div>
 )
 
@@ -181,11 +179,3 @@ const Settings = () => (
     <p>Change your password  email notifications and privacy settings.</p>
   </div>
 )
-
-
-
-
-
-
-
-

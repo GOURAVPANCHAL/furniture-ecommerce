@@ -120,15 +120,13 @@ const page = () => {
                     <div className='row'>
                         {products?.map((item, index) => {
                             return (
-                                <div className='col-md-3' key={index}>
+                                <div className='col-md-3 col-6' key={index}>
                                     <div className='product-card' style={{ position: 'relative' }}>
                                         <Link href={`/Pages/products/id`} className='product-link'>
                                             <img
                                                 className='product-image'
                                                 src={item.images[0]}
                                                 alt='product-image'
-                                                width={300}
-                                                height={300}
                                             />
                                             <div className='product-details'>
                                                 <h3>{item.productName}</h3>
