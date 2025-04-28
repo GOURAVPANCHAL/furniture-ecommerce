@@ -16,6 +16,9 @@ import { RiAccountBoxFill } from "react-icons/ri";
 import { FaShoppingCart } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 
+
+// //////////////////////////////////
+
 const dropdownContent = {
 
   Furniture: {
@@ -126,7 +129,7 @@ const Navbar = () => {
               <Link className="nav-link" href="/Pages/franchise">
                 Become a Franchise
               </Link>
-              <Link className="nav-link" href="#">
+              <Link className="nav-link" href="/Pages/TrackOrder">
                 Track Order
               </Link>
               <Link className="nav-link" href="/Pages/helpCenter">

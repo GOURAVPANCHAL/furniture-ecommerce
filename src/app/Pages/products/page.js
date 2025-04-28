@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { FaHeart } from "react-icons/fa";
 import { FaRegHeart } from 'react-icons/fa6';
 
-const page = () => {
+const Page = () => {
     // State to track the wishlisted product ID
     const [wishlistedProductId, setWishlistedProductId] = useState(null);
 
@@ -30,7 +30,7 @@ const page = () => {
             })
     }, [])
 
-    return (
+    return ( 
         <>
             {/* Product filter section */}
             <section className='product-filter py-2'>
@@ -131,9 +131,9 @@ const page = () => {
                                             <div className='product-details'>
                                                 <h3>{item.productName}</h3>
                                                 <div className='product-price-section'>
-                                                    <p className='final-price'>₹{item.Variant[0].finalPrice}</p>
-                                                    <p className='price'><del>₹{item.Variant[0].price}</del></p>
-                                                    <p className='discount'>{item.Variant[0].discountPrice}% OFF</p>
+                                                    <p className='final-price'>₹{item.price}</p>
+                                                    <p className='price'><del>₹{item.price}</del></p>
+                                                    <p className='discount'>{item.price}% OFF</p>
                                                 </div>
                                             </div>
 
@@ -164,4 +164,4 @@ const page = () => {
     )
 }
 
-export default page;
+export default Page;

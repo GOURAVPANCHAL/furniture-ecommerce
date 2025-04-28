@@ -10,7 +10,7 @@ import { IoCall } from "react-icons/io5";
 import { FaInstagramSquare, FaFacebookSquare, FaTwitterSquare } from 'react-icons/fa';
 import { IoMdHome } from "react-icons/io";
 
-const page = () => {
+const Page = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -153,4 +153,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
